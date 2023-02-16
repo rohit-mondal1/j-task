@@ -9,17 +9,17 @@ const Header = () => {
         <Link to='/'>Home</Link>
       </li>
       <li>
-        <Link to='/'>Jobs</Link>
+        <Link to='/jobs'>Jobs</Link>
       </li>
       <li>
-        <Link to='/'>Contact Us</Link>
+        <Link to='/About_Us'>Contact Us</Link>
       </li>
 
       <li>
-        <Link to='/'>Log In</Link>
+        <Link to='/login'>Log In</Link>
       </li>
       <li>
-        <Link to='/'>Sign Up</Link>
+        <Link to='/signup'>Sign Up</Link>
       </li>
     </>
   );
