@@ -7,6 +7,7 @@ import Apply from "../components/Apply/Apply";
 import Home from "../components/Home/Home";
 import Experienced_Jobs from "../components/Page/Experienced_Jobs/Experienced_Jobs";
 import Fresher_Jobs from "../components/Page/Fresher_Jobs/Fresher_Jobs";
+import All_detls from "../components/Page/Top_IT_Companie/All_detls";
 import Details from "../components/Page/Top_IT_Companie/Details";
 import Private from "../context/Private";
 
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       { path: "/Fresher_Jobs", element:  <Fresher_Jobs /> },
       { path: "/Experienced_Jobs", element: <Experienced_Jobs /> },
       { path: "/Details", element: <Details /> },
+      { path: "/All_Details", element: <All_detls /> },
       { path: "/apllay", element: <Private> <Apply /></Private>  },
     ],
   },

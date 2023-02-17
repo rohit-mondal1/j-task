@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Authcontext } from "../../../context/UserContext";
 
 import Top_it_cart from "./Top_it_cart";
 
 const Top_It_company = () => {
+  const { pathname } = useLocation();
   const [company, setcompany] = useState([]);
   const { setCompane } = useContext(Authcontext);
   useEffect(() => {
@@ -26,6 +28,16 @@ const Top_It_company = () => {
           ></Top_it_cart>
         ))}
       </div>
+
+      {/* {pathname === "/Fresher_Jobs" ? null : ( */}
+        <div className="mx-auto  w-44 mb-8 mt-3">
+          <Link to="/All_Details">
+            <button className="btn btn-accent text-center">
+              All Company
+            </button>
+          </Link>
+        </div>
+      {/* )} */}
     </div>
   );
 };

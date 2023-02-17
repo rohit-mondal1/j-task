@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Details from "./Details";
+
 
 
 const Top_it_cart = ({ companys, handeldetls }) => {
-  const { img, link, name, location, about } = companys;
+  const { img, name } = companys;
 
   return (
     <div>
