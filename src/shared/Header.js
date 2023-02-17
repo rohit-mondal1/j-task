@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../context/UserContext";
 
 const Header = () => {
+
+const {user} = useContext(Authcontext);
+
+
+console.log(user);
+
+
+
+
+
+
   const manu = (
     <>
       <li>

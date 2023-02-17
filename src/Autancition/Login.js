@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { Authcontext } from '../context/UserContext';
 
 const Login = () => {
+  const { loginemail } = useContext(Authcontext);
+
+  const handellogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    loginemail(email, password)
+      .then((result) => {
+        const users = result.user;
+        if (users.uid) {
+          form.reset()
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <div className="w-full max-w-md p-8 space-y-3 rounded-xl  mx-auto mt-6 bg-gray-900 text-gray-100">
       <h1 className="text-2xl font-bold text-center">Login</h1>
-      <form className="space-y-6 ng-untouched ng-pristine ng-valid">
+      <form
+        onSubmit={handellogin}
+        className="space-y-6 ng-untouched ng-pristine ng-valid"
+      >
         <div className="space-y-1 text-sm">
-          <label for="Email" className="block text-gray-400">
+          <label htmlFor="Email" className="block text-gray-400">
             Email
           </label>
           <input
@@ -20,7 +42,7 @@ const Login = () => {
           />
         </div>
         <div className="space-y-1 text-sm">
-          <label for="password" className="block text-gray-400">
+          <label htmlFor="password" className="block text-gray-400">
             Password
           </label>
           <input
@@ -42,7 +64,7 @@ const Login = () => {
       </div>
       <div className="flex justify-center space-x-4">
         <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
-         <FcGoogle className='text-5xl font-bold'/>
+          <FcGoogle className="text-5xl font-bold" />
         </button>
       </div>
       <p className="text-xs text-center sm:px-6 text-gray-400">
