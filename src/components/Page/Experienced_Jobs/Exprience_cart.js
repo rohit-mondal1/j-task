@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Exprience_cart = ({ job }) => {
   const { position, company, location, skill, price , experienced} = job;
@@ -44,9 +45,12 @@ const Exprience_cart = ({ job }) => {
           </span>
           {price} BDT
         </h1>
-        <button className="btn btn-outline btn-primary w-full mt-4">
-          apply
+        <Link to='/apllay'>
+         <button className="btn btn-outline btn-primary w-full mt-4">
+         Applay
         </button>
+        </Link>
+         
       </div>
     </div>
   );

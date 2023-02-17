@@ -25,10 +25,10 @@ const logout =()=>{
         <Link to='/'>Home</Link>
       </li>
       <li>
-        <Link to='/jobs'>Jobs</Link>
+        <Link to='/about'>About</Link>
       </li>
       <li>
-        <Link to='/About_Us'>Contact Us</Link>
+        <Link to='/contacts_Us'>Contact Us</Link>
       </li>
 
       {user?.uid ? <li>

@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { toast } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../context/UserContext";
 
 const Signup = () => {
   const { signupemail , google} = useContext(Authcontext);
+  const location =useLocation()
+  const navigate = useNavigate()
+  const from = location.state?.from?.pathname || "/";
 
   const handellogin = (event) => {
     event.preventDefault();
@@ -18,6 +21,7 @@ const Signup = () => {
         const users = result.user;
         if (users.uid) {
           form.reset();
+          navigate(from, { replace: true })
           return toast.success("Successfully sign Up!");
         }
       })
@@ -32,6 +36,7 @@ const Signup = () => {
     google()
       .then((res) => {
         if (res.user.uid) {
+          navigate(from, { replace: true })
           return toast.success("Successfully Log In!");
         }
       })

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Exprience_cart from "./Exprience_cart";
 
 const Experienced_Jobs = () => {
   const [expreacse, setExpreacse] = useState([]);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     fetch("exprenceJob.json")
@@ -18,9 +20,15 @@ const Experienced_Jobs = () => {
         ))}
       </div>
 
-      <div className="mx-auto  w-44 mb-8 mt-3">
-        <button className="btn btn-accent text-center">Experiences All Jobs</button>
-      </div>
+      {pathname === "" ? null : (
+        <div className="mx-auto  w-56 mb-8 mt-3">
+          <Link to="/Experienced_Jobs">
+            <button className="btn btn-accent text-center">
+              Experiences All Jobs
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
