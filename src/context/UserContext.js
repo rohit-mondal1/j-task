@@ -14,6 +14,7 @@ const auth = getAuth(app);
 
 const UserContext = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [Compane, setCompane] = useState(null);
   const [loder, setLoder] = useState(true);
   const provider = new GoogleAuthProvider();
 
@@ -43,7 +44,7 @@ const UserContext = ({ children }) => {
     return signInWithPopup(auth , provider)
   }
 
-  let authinfo = { user, signupemail, loginemail, auth, loder , google };
+  let authinfo = { user, signupemail, loginemail, auth, loder , google, setCompane , Compane };
 
   return (
     <div>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "img": "https://thefinancialexpress.com.bd/uploads/1669636549.jpg",
+    "link": "https://www.programming-hero.com/index.html",
+    "name": "Programming_hero",
+    "location": "Level-4, 34, Awal Centre, Banani, Dhaka",
+    "about": "We started with one mission: Make Learning fun. Since then, all five and a half caffeine sucking night owls are having fun."
+  },
+  {
+    "id": "2",
+    "img": "https://ln.ibossems.com/images/iboss_left_logo.png",
+    "link": "https://www.iboss.com/",
+    "name": "Iboss",
+    "location": "Dhaka",
+    "about": "The iboss Zero Trust SSE prevents breaches by making applications, data and services inaccessible to attackers while allowing trusted users to securely and directly connect to protected resources from anywhere"
+  },
+  {
+    "id": "3",
+    "img": "https://zaman.tech/images/zaman-main.png",
+    "link": "https://zamantech.com.bd/",
+    "name": "Zaman Tech Bangladesh",
+    "location": "7th Floor, South Zone Hospital, 33 Outer Bypass Rd, Khulna 9100, Bangladesh",
+    "about": "Zaman Tech BD is an Outsource Web Design, Development & SEO company in Khulna, Bangladesh. We empower you to grow your business by providing very high quality web & digital solution."
+  }
+]
