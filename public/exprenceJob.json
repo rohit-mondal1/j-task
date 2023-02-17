@@ -1,0 +1,58 @@
+[
+  {
+    "id" :"1",
+    "position": " Back-end developer",
+    "company": " I boss",
+    "experienced": " 3 year",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "Node js", "Express ", "TypeScript" , "React js" , "MongoBD"],
+    "price": " 40000"
+  },
+  
+  {
+    "id" :"3",
+    "position": " full-stack",
+    "company": " R.C.S.",
+    "experienced": " 5 year",
+    "location": " Khulna",
+    "skill": ["Node js", "React js", "JavaScript", "Redux" , "Express " , "MongoBD"],
+    "price": " 40000"
+  },
+  {
+    "id" :"5",
+    "position": " Back-end developer",
+    "company": " LWS",
+    "experienced": " 2 year",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "Node js", "Express js ", "PHP" , "React js" , "Mongo BD", "TypeScript"],
+    "price": " 300000"
+  },
+  {
+    "id" :"2",
+    "position": " Mern-Stack developer",
+    "company": " Programming_hero",
+    "location": " Dhaka",
+    "experienced": " 3 year",
+    "skill": ["MongoBD", "Express ", "React js", "Node js"],
+    "price": " 30000"
+  },
+  {
+    "id" :"4",
+    "position": " front-end developer",
+    "company": " I boss",
+    "experienced": " 1 year",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "React js", "tailwind ", "Redux", "Express ", "Mongo BD"],
+    "price": " 25000"
+  },
+
+  {
+    "id" :"6",
+    "position": " Front-end developer",
+    "company": " Programming_hero",
+    "experienced": " 2 year",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "React js", "tailwind ", "Redux"],
+    "price": " 20000"
+  }
+]

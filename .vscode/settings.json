@@ -3,9 +3,11 @@
     "Authcontext",
     "authinfo",
     "authvalue",
+    "handelgoogle",
     "handellogin",
     "Loder",
     "loginemail",
+    "setexpreacse",
     "signupemail",
     "unsubmite"
   ]

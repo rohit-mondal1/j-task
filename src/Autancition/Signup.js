@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
+import { toast } from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../context/UserContext";
 
 const Signup = () => {
-  const { signupemail } = useContext(Authcontext);
+  const { signupemail , google} = useContext(Authcontext);
 
   const handellogin = (event) => {
     event.preventDefault();
@@ -16,13 +17,30 @@ const Signup = () => {
       .then((result) => {
         const users = result.user;
         if (users.uid) {
-          form.reset()
+          form.reset();
+          return toast.success("Successfully sign Up!");
         }
       })
       .catch((error) => {
         console.log(error.message);
+        return toast.error("error error error!");
       });
   };
+
+
+  const handelgoogle = () => {
+    google()
+      .then((res) => {
+        if (res.user.uid) {
+          return toast.success("Successfully Log In!");
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+        return toast.error("error error error!");
+      });
+  };
+
   return (
     <div className="w-full max-w-md mx-auto mt-6 p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
       <h1 className="text-2xl font-bold text-center">Sign Up</h1>
@@ -66,7 +84,7 @@ const Signup = () => {
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
       </div>
       <div className="flex justify-center space-x-4">
-        <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
+        <button onClick={handelgoogle} aria-label="Log in with Twitter" className="p-3 rounded-sm">
           <FcGoogle className="text-5xl font-bold" />
         </button>
       </div>

@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
 } from "firebase/auth";
 import app from "../Firebase";
 
@@ -38,8 +39,11 @@ const UserContext = ({ children }) => {
       unsubmite();
     };
   }, []);
+  const google = ()=>{
+    return signInWithPopup(auth , provider)
+  }
 
-  let authinfo = { user, signupemail, loginemail, auth, loder };
+  let authinfo = { user, signupemail, loginemail, auth, loder , google };
 
   return (
     <div>

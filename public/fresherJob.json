@@ -1,0 +1,45 @@
+[
+  {
+    "position": " front-end developer",
+    "company": " Programming_hero",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "React js", "tailwind ", "Redux"],
+    "price": " 15000"
+  },
+  {
+    "position": " Mern-Stack developer",
+    "company": " I boss",
+    "location": " Dhaka",
+    "skill": ["MongoBD", "Express ", "React js", "Node js"],
+    "price": "16000"
+  },
+  {
+    "position": " Back-end developer",
+    "company": " Programming_hero",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "Node js", "Express ", "PHP"],
+    "price": " 10000"
+  },
+  {
+    "position": " full-stack",
+    "company": "R .C.S.",
+    "location": " Khulna",
+    "skill": ["Node js", "React js", "JavaScript", "Redux"],
+    "price": " 20000"
+  },
+ 
+  {
+    "position": " Back-end developer",
+    "company": " I boss",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "Node js", "Express ", "TypeScript"],
+    "price": " 15000"
+  },
+  {
+    "position": " Front-end developer",
+    "company": " LWS",
+    "location": " Dhaka",
+    "skill": ["JavaScript", "React js", "tailwind ", "Redux"],
+    "price": " 10000"
+  }
+]

@@ -1,3 +1,4 @@
+import { signOut } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -5,13 +6,16 @@ import { Authcontext } from "../context/UserContext";
 
 const Header = () => {
 
-const {user} = useContext(Authcontext);
+const {user ,auth} = useContext(Authcontext);
 
 
-console.log(user);
-
-
-
+const logout =()=>{
+  signOut(auth).then(() => {
+    // Sign-out successful.
+  }).catch((error) => {
+    // An error happened.
+  });
+}
 
 
 
@@ -27,12 +31,18 @@ console.log(user);
         <Link to='/About_Us'>Contact Us</Link>
       </li>
 
+      {user?.uid ? <li>
+        <Link onClick={logout}>Log Out</Link>
+      </li> : <>
       <li>
         <Link to='/login'>Log In</Link>
       </li>
       <li>
         <Link to='/signup'>Sign Up</Link>
       </li>
+      </>}
+
+      
     </>
   );
 

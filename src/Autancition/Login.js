@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { Authcontext } from '../context/UserContext';
+import { toast } from "react-hot-toast";
 
 const Login = () => {
-  const { loginemail } = useContext(Authcontext);
+  const { loginemail, google } = useContext(Authcontext);
 
   const handellogin = (event) => {
     event.preventDefault();
@@ -15,11 +16,26 @@ const Login = () => {
       .then((result) => {
         const users = result.user;
         if (users.uid) {
-          form.reset()
+          form.reset();
+          return toast.success("Successfully Log In!");
         }
       })
       .catch((error) => {
         console.log(error.message);
+        return toast.error("error error error!");
+      });
+  };
+
+  const handelgoogle = () => {
+    google()
+      .then((res) => {
+        if (res.user.uid) {
+          return toast.success("Successfully Log In!");
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+        return toast.error("error error error!");
       });
   };
   return (
@@ -63,7 +79,11 @@ const Login = () => {
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
       </div>
       <div className="flex justify-center space-x-4">
-        <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
+        <button
+          onClick={handelgoogle}
+          aria-label="Log in with Twitter"
+          className="p-3 rounded-sm"
+        >
           <FcGoogle className="text-5xl font-bold" />
         </button>
       </div>
