@@ -20,7 +20,7 @@ const Experienced_Jobs = () => {
         ))}
       </div>
 
-      {pathname === "" ? null : (
+      {pathname === "/Experienced_Jobs" ? null : (
         <div className="mx-auto  w-56 mb-8 mt-3">
           <Link to="/Experienced_Jobs">
             <button className="btn btn-accent text-center">

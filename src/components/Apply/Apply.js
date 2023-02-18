@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const Apply = () => {
@@ -7,7 +8,7 @@ const Apply = () => {
   const handelsubmite = (event) => {
     event.preventDefault();
     console.log("object");
-    return navegate("/");
+    return (navegate("/"), toast.success("Successfully Applay!"));
   };
   return (
     <div>
@@ -72,10 +73,9 @@ const Apply = () => {
               />
             </div>
             <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-blue-400">
-            Applay
+              Applay
             </button>
           </form>
-          
         </div>
       </div>
     </div>
