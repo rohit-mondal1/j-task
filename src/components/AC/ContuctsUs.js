@@ -12,7 +12,8 @@ const ContuctsUs = () => {
   return (
     <div>
       <div>
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto my-5 bg-gray-900 text-gray-100">
+        <div data-aos="fade-up"
+     data-aos-duration="3000" className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto my-5 bg-gray-900 text-gray-100">
           <h1 className="text-2xl font-bold text-center">Contacts Us</h1>
           <form
             onSubmit={handelsubmite}

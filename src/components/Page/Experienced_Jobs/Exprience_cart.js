@@ -6,7 +6,7 @@ const Exprience_cart = ({ job }) => {
 
   return (
     <div>
-      <div className="max-w-[360px] p-4 bg-slate-200 border-spacing-1 my-3 mx-auto ml-3 mr-3 ">
+      <div data-aos="zoom-in-up" className="max-w-[360px] p-4 bg-slate-200 border-spacing-1 my-3 mx-auto ml-3 mr-3 ">
         <h1 className=" text-center mb-3">
           <span className="text-xl font-bold text-blue-800">
             company name :

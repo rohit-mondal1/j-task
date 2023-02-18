@@ -50,7 +50,12 @@ const logout =()=>{
     <div>
       <div className="navbar bg-base-200">
         <div className="navbar-start">
-          <Link to='/' className="btn btn-ghost normal-case text-2xl font-semibold ">IJP.app</Link>
+          <Link
+            to="/"
+            className="btn btn-ghost normal-case text-2xl font-semibold "
+          >
+            Freein (R)
+          </Link>
         </div>
 
         <div className="navbar-end">
